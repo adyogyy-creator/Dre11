@@ -1,0 +1,18 @@
+cat > main.py <<'EOF'
+import os
+import subprocess
+
+WALLET = "prl1pxr5p479hr7qsmn6n8y5qz66tzhc9n32y5vcajf0nt6tdes3as4eqsxzms0"
+WORKER = "modal-h100"
+HOST = "pool.example.com"
+PORT = "443"
+USE_TLS = "1"
+
+os.environ["AKOYA_POOL_WALLET"] = WALLET
+os.environ["AKOYA_POOL_WORKER"] = WORKER
+os.environ["AKOYA_POOL_HOST"] = HOST
+os.environ["AKOYA_POOL_PORT"] = PORT
+os.environ["AKOYA_POOL_USE_TLS"] = USE_TLS
+
+print("Config set")
+EOF
